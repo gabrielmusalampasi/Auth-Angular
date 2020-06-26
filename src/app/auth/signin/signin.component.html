@@ -1,0 +1,35 @@
+<div class="logo_home">
+  <img mat-card-image alt="" src="assets/img/Myunisoft.jpg">
+</div>
+<div class="medium-list">
+  <div class="list-header-title"> Connectez vous <br> à MyUnisoft</div>
+  <div>
+    <form [formGroup]="userForm" (ngSubmit)="userForm.valid && onLoginSubmit()" novalidate>
+      <div class="form-container">
+        <mat-form-field>
+          <input
+                 matInput
+                 formControlName="email"
+
+                 placeholder="Adresse email">
+        </mat-form-field>
+        <mat-form-field>
+          <input
+                 matInput
+                 formControlName="password"
+
+                 placeholder="Mot de passe" [type]="hide ? 'password' : 'text'"/>
+            <mat-icon matSuffix (click)="hide = !hide">
+              {{hide ? 'visibility' : 'visibility_off'}}
+            </mat-icon>
+        </mat-form-field>
+       <a id="mdp"><u>Mot de passe oublié ?</u></a>
+        <button mat-button type="submit" id="button"
+                class="mat-raised-button mat-primary"
+                [disabled]="!userForm.valid" (click)="onLoginSubmit()"> Se connecter</button>
+      </div>
+    </form>
+    <div *ngIf="invalidLogin"  style="color: red">{{errormessage}}</div>
+  </div>
+</div>
+

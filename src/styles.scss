@@ -1,1 +1,82 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 /* You can add global styles to this file, and also import other style files */
+
+.medium-list {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  margin: 50px auto auto;
+}
+.list-viewer-wrapper {
+  border: 1px solid rgba(0,0,0,.03);
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  margin: 40px;
+  width: 50px;
+
+}
+.list-header-title {
+  color: black;
+  background: white;
+  padding: 8px 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+.divider {
+margin-top: 10px !important;
+}
+#button{
+  width: 250px;
+  font-size: 25px;
+  left: 150px;
+  background-color: #33F6FF  ;
+  border-radius : 2px;
+
+}
+#mdp{
+  position: relative;
+  left: 450px;
+  cursor: pointer;
+}
+.logo {
+  position: relative;
+  top: 40px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 3s;
+  text-align: center;
+  place-self: center;
+  animation: drive 1s ease-out alternate infinite;
+  border: solid 2px grey;
+}
+.logo_home {
+  text-align: end;
+}
+
+#titre{
+  font-size: 50px;
+}
+//KeyFrame Drive
+@keyframes drive {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(80px);
+  }
+
+}
+.deconnecter {
+  background-color: royalblue;
+  float: right;
+  border-radius : 2px;
+  left: 150px;
+
+}
